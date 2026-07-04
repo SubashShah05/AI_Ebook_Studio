@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900 min-h-screen antialiased;
+}
+
+/* Custom simple toast container mock styling elements */
+.toast-success { @apply bg-emerald-600 text-white p-3 rounded-lg shadow-lg fixed bottom-5 right-5 z-50 animate-bounce; }
+.toast-error { @apply bg-rose-600 text-white p-3 rounded-lg shadow-lg fixed bottom-5 right-5 z-50 animate-bounce; }
