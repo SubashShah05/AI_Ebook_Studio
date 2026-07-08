@@ -2,6 +2,9 @@
 
 AI Ebook Studio is a full-stack web application built using the MERN stack. It leverages the power of Google Gemini AI to help users automatically architect, structure, write, and export complete multi-chapter digital books from a single topic prompt.
 
+## 🌐 Live Demo
+**https://ai-ebook-studio.vercel.app/**
+
 ## 🚀 Features
 
 - **AI Content Pipeline Architect:** Automatically computes structured multi-chapter layouts using Google Gemini AI with strict schema configurations.
@@ -17,4 +20,5 @@ AI Ebook Studio is a full-stack web application built using the MERN stack. It l
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB, Mongoose Object Data Modeling (ODM)
 - **AI Integration:** Google Gemini API
+  
 
