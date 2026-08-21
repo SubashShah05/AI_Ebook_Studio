@@ -9,7 +9,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'border-spin': 'border-spin 4s linear infinite',
+      },
+      keyframes: {
+        'border-spin': {
+          '100%': { transform: 'rotate(360deg)' },
+        }
+      }
+    },
   },
   plugins: [],
 }

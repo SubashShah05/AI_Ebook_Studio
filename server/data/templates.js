@@ -1,0 +1,170 @@
+// Static template data - seeded as constants for reliability
+// Templates are shared across all users and don't require DB storage
+export const TEMPLATES = [
+  {
+    _id: 'tpl_technical_guide',
+    name: 'Technical Guide',
+    category: 'Technical',
+    description: 'A structured guide for documenting software, APIs, tools, or technical processes.',
+    defaultChapterCount: 8,
+    defaultGenre: 'Technology',
+    defaultAudience: 'Developers',
+    defaultTone: 'Professional',
+    defaultLanguage: 'English',
+    icon: '⚙️',
+    accentColor: '#6366f1',
+    chapters: [
+      { title: 'Introduction', description: 'Overview of the subject matter, prerequisites, and what readers will learn.' },
+      { title: 'Fundamentals', description: 'Core foundational concepts every reader must understand before proceeding.' },
+      { title: 'Core Concepts', description: 'Deep-dive into the primary concepts, terminology, and theory.' },
+      { title: 'Practical Implementation', description: 'Hands-on examples, code, and step-by-step implementation guidance.' },
+      { title: 'Advanced Concepts', description: 'More complex scenarios, edge cases, and advanced usage patterns.' },
+      { title: 'Best Practices', description: 'Industry standards, do\'s and don\'ts, and optimization techniques.' },
+      { title: 'Case Study', description: 'A real-world example or project showing the concepts applied end-to-end.' },
+      { title: 'Conclusion & Next Steps', description: 'Summary of key learnings and recommended next steps for readers.' }
+    ]
+  },
+  {
+    _id: 'tpl_educational_course',
+    name: 'Educational Course',
+    category: 'Educational',
+    description: 'A curriculum-style ebook for teaching a skill or subject to students.',
+    defaultChapterCount: 10,
+    defaultGenre: 'Education',
+    defaultAudience: 'Students',
+    defaultTone: 'Academic',
+    defaultLanguage: 'English',
+    icon: '🎓',
+    accentColor: '#0ea5e9',
+    chapters: [
+      { title: 'Course Overview', description: 'Learning objectives, course structure, and what students will achieve.' },
+      { title: 'Module 1: Foundations', description: 'The fundamental building blocks of the subject.' },
+      { title: 'Module 2: Core Principles', description: 'Essential rules, theories, and principles.' },
+      { title: 'Module 3: Applied Concepts', description: 'Applying theory through practical exercises and examples.' },
+      { title: 'Module 4: Intermediate Topics', description: 'Building on the basics with more nuanced material.' },
+      { title: 'Module 5: Advanced Skills', description: 'Complex techniques and professional-grade applications.' },
+      { title: 'Assessments & Exercises', description: 'Practice problems, quizzes, and review questions.' },
+      { title: 'Projects & Real-World Applications', description: 'Capstone projects and industry applications.' },
+      { title: 'Resources & Further Reading', description: 'Recommended books, tools, and online resources.' },
+      { title: 'Final Review & Summary', description: 'Comprehensive recap and graduation checklist.' }
+    ]
+  },
+  {
+    _id: 'tpl_business_playbook',
+    name: 'Business Playbook',
+    category: 'Business',
+    description: 'A strategic business guide covering operations, strategy, and execution.',
+    defaultChapterCount: 8,
+    defaultGenre: 'Business',
+    defaultAudience: 'Entrepreneurs',
+    defaultTone: 'Professional',
+    defaultLanguage: 'English',
+    icon: '💼',
+    accentColor: '#f59e0b',
+    chapters: [
+      { title: 'Executive Summary', description: 'Vision, mission, key objectives, and what this playbook covers.' },
+      { title: 'Market Analysis', description: 'Target market research, competitive landscape, and industry trends.' },
+      { title: 'Strategy & Positioning', description: 'Unique value proposition, competitive advantage, and positioning.' },
+      { title: 'Operations Framework', description: 'Processes, workflows, tools, and operational guidelines.' },
+      { title: 'Team & Culture', description: 'Hiring strategy, organizational structure, and company culture.' },
+      { title: 'Financial Planning', description: 'Revenue model, budgeting, KPIs, and financial projections.' },
+      { title: 'Marketing & Growth', description: 'Go-to-market strategy, channels, acquisition, and retention.' },
+      { title: 'Execution Roadmap', description: 'Milestones, action items, timelines, and success metrics.' }
+    ]
+  },
+  {
+    _id: 'tpl_self_improvement',
+    name: 'Self Improvement Guide',
+    category: 'Self Improvement',
+    description: 'A motivational and practical self-help book for personal growth and transformation.',
+    defaultChapterCount: 9,
+    defaultGenre: 'Self-Help',
+    defaultAudience: 'General Audience',
+    defaultTone: 'Conversational',
+    defaultLanguage: 'English',
+    icon: '🌱',
+    accentColor: '#10b981',
+    chapters: [
+      { title: 'Where You Are Now', description: 'An honest assessment of your current situation and starting point.' },
+      { title: 'The Vision', description: 'Defining your ideal future self and setting a compelling vision.' },
+      { title: 'Mindset Shift', description: 'Overcoming limiting beliefs and adopting a growth mindset.' },
+      { title: 'Habit Architecture', description: 'Building systems and habits that drive consistent progress.' },
+      { title: 'Productivity & Focus', description: 'Time management, deep work, and eliminating distractions.' },
+      { title: 'Health & Energy', description: 'Physical and mental wellness as the foundation of performance.' },
+      { title: 'Relationships & Social Capital', description: 'Building meaningful connections and a strong support network.' },
+      { title: 'Financial Mindset', description: 'Developing a healthy relationship with money and building wealth.' },
+      { title: 'Living With Purpose', description: 'Creating a life of meaning, fulfillment, and lasting impact.' }
+    ]
+  },
+  {
+    _id: 'tpl_marketing_handbook',
+    name: 'Marketing Handbook',
+    category: 'Marketing',
+    description: 'A comprehensive guide covering digital marketing strategy, channels, and campaigns.',
+    defaultChapterCount: 8,
+    defaultGenre: 'Marketing',
+    defaultAudience: 'Marketing Professionals',
+    defaultTone: 'Professional',
+    defaultLanguage: 'English',
+    icon: '📣',
+    accentColor: '#f43f5e',
+    chapters: [
+      { title: 'Marketing Fundamentals', description: 'Core principles, terminology, and the modern marketing landscape.' },
+      { title: 'Audience Research', description: 'Defining personas, customer journeys, and market segmentation.' },
+      { title: 'Content Marketing', description: 'Building a content strategy that attracts, engages, and converts.' },
+      { title: 'SEO & Organic Growth', description: 'Search engine optimization, keyword strategy, and technical SEO.' },
+      { title: 'Paid Advertising', description: 'PPC, social ads, budgeting, and measuring ROI.' },
+      { title: 'Social Media Strategy', description: 'Platform selection, community building, and social content.' },
+      { title: 'Email Marketing', description: 'List building, automation, segmentation, and email campaigns.' },
+      { title: 'Analytics & Optimization', description: 'Tracking, attribution, A/B testing, and continuous improvement.' }
+    ]
+  },
+  {
+    _id: 'tpl_research_guide',
+    name: 'Research Guide',
+    category: 'Research',
+    description: 'An academic or professional research document with findings and analysis.',
+    defaultChapterCount: 8,
+    defaultGenre: 'Academic',
+    defaultAudience: 'Researchers',
+    defaultTone: 'Academic',
+    defaultLanguage: 'English',
+    icon: '🔬',
+    accentColor: '#8b5cf6',
+    chapters: [
+      { title: 'Abstract', description: 'Brief summary of the research purpose, methodology, findings, and implications.' },
+      { title: 'Introduction', description: 'Background context, research problem statement, and objectives.' },
+      { title: 'Literature Review', description: 'Review of existing research and how this work builds on it.' },
+      { title: 'Methodology', description: 'Research design, data collection methods, and analytical approach.' },
+      { title: 'Findings', description: 'Presentation of research data, results, and observed patterns.' },
+      { title: 'Analysis & Discussion', description: 'Interpretation of findings in context of the research questions.' },
+      { title: 'Conclusions', description: 'Key takeaways, contributions, and practical implications.' },
+      { title: 'References & Appendices', description: 'Bibliography, data tables, and supplementary material.' }
+    ]
+  },
+  {
+    _id: 'tpl_fiction_story',
+    name: 'Fiction Story',
+    category: 'Fiction',
+    description: 'A narrative fiction structure with developed characters, plot arcs, and themes.',
+    defaultChapterCount: 10,
+    defaultGenre: 'Fiction',
+    defaultAudience: 'General Audience',
+    defaultTone: 'Storytelling',
+    defaultLanguage: 'English',
+    icon: '📖',
+    accentColor: '#ec4899',
+    chapters: [
+      { title: 'The World', description: 'Introduce the setting, time, and world in which the story takes place.' },
+      { title: 'The Protagonist', description: 'Meet the main character — their world, desires, and flaws.' },
+      { title: 'The Catalyst', description: 'The inciting event that disrupts the protagonist\'s ordinary world.' },
+      { title: 'Rising Action I', description: 'The protagonist faces early obstacles and begins their journey.' },
+      { title: 'Rising Action II', description: 'Complications deepen; stakes are raised; alliances form.' },
+      { title: 'The Midpoint Turn', description: 'A major revelation or reversal that shifts the story\'s direction.' },
+      { title: 'The Dark Night', description: 'The protagonist\'s lowest point; all seems lost.' },
+      { title: 'The Climax', description: 'The ultimate confrontation or decision that resolves the central conflict.' },
+      { title: 'Falling Action', description: 'Immediate aftermath of the climax; loose ends addressed.' },
+      { title: 'Resolution', description: 'The new normal; the protagonist\'s transformation made visible.' }
+    ]
+  }
+];

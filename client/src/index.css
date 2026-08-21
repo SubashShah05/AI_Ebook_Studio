@@ -9,3 +9,72 @@ body {
 /* Custom simple toast container mock styling elements */
 .toast-success { @apply bg-emerald-600 text-white p-3 rounded-lg shadow-lg fixed bottom-5 right-5 z-50 animate-bounce; }
 .toast-error { @apply bg-rose-600 text-white p-3 rounded-lg shadow-lg fixed bottom-5 right-5 z-50 animate-bounce; }
+
+/* Logo Orbit Animation */
+.logo-orbit-container {
+  --orbit-radius-x: 40vw;
+  position: relative;
+  height: 120px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .logo-orbit-container {
+    --orbit-radius-x: 350px;
+    height: 140px;
+  }
+}
+
+@keyframes logo-orbit {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+    z-index: 10;
+  }
+  25% {
+    transform: translateX(var(--orbit-radius-x)) translateY(-10px) scale(0.95);
+    opacity: 0.8;
+    z-index: 5;
+  }
+  50% {
+    transform: translateX(0) translateY(-20px) scale(0.92);
+    opacity: 0.65;
+    z-index: 0;
+  }
+  75% {
+    transform: translateX(calc(var(--orbit-radius-x) * -1)) translateY(-10px) scale(0.95);
+    opacity: 0.8;
+    z-index: 5;
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.logo-orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px; 
+  margin-left: -80px; 
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  animation: logo-orbit 15s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-orbit-item {
+    animation: none !important;
+    position: static;
+    margin: 0;
+    width: auto;
+  }
+  .logo-orbit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

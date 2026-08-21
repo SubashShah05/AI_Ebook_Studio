@@ -7,13 +7,19 @@ export default function BookCard({ book, onDelete }) {
   const apiBase = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';
 
   return (
-    <div className="bg-white rounded-xl shadow hover:shadow-md border border-slate-100 transition overflow-hidden flex flex-col justify-between">
+    <div className="bg-white rounded-xl shadow hover:shadow-md border border-slate-100 transition overflow-hidden flex flex-col justify-between active:scale-[0.98]">
       <div className="p-0 relative h-48 bg-slate-100">
         <img 
           src={book.coverImage ? `${apiBase}${book.coverImage}` : fallbackImg} 
           alt={book.title} 
           className="w-full h-full object-cover"
         />
+        <div className="absolute top-3 right-3 flex flex-col gap-2">
+          {book.status === 'draft' && <span className="bg-slate-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow">DRAFT</span>}
+          {book.status === 'generating' && <span className="bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow animate-pulse">GENERATING...</span>}
+          {book.status === 'ready' && <span className="bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow">READY</span>}
+          {book.status === 'failed' && <span className="bg-rose-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow">FAILED</span>}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
           <h3 className="text-white font-bold text-lg leading-tight truncate">{book.title}</h3>
           <p className="text-slate-200 text-xs truncate">{book.subtitle || 'No Subtitle'}</p>
